@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">TEN PERCENT</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="frist_name">الاسم الأول *</string>
+    <string name="second_name">الاسم الثانى *</string>
+    <string name="email">البريد الألكترونى *</string>
+    <string name="phone_number">رقم الموبايل*</string>
+    <string name="password">الرقم السري*</string>
+    <string name="create_acounte">انشاء حساب</string>
+    <string name="i_have_acounte">لديك حساب؟</string>
+    <string name="login">تسجيل الدخول</string>
+
+
+    <style name="CustomTabText" parent="TextAppearance.Design.Tab">
+
+        <item name="android:fontFamily">@font/homefont</item>
+
+
+    </style>
+</resources>

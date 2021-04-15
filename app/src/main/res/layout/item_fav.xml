@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="@dimen/_3ssp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="@dimen/_5sdp"
+    app:cardCornerRadius="@dimen/_5sdp">
+    <RelativeLayout
+        android:background="#BC1212"
+        android:id="@+id/view_background"
+        android:layout_margin="@dimen/_5ssp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/delete_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_10sdp"
+            app:srcCompat="@drawable/ic_delete_sweep"
+            tools:ignore="VectorDrawableCompat" />
+    </RelativeLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/view_for_background"
+        android:layout_width="match_parent"
+        android:padding="@dimen/_5sdp"
+        android:background="@color/white"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_90sdp"
+
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+
+            android:id="@+id/img_product_fav"
+            android:contentDescription="@string/app_name" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5ssp"
+            app:layout_constraintRight_toLeftOf="@id/img_product_fav"
+            app:layout_constraintBottom_toBottomOf="parent"
+android:layout_marginRight="@dimen/_20sdp"
+android:layout_marginBottom="@dimen/_5sdp"
+            android:scaleType="fitXY"
+            android:id="@+id/tv_pric_fav"
+            android:textColor="#F40505"
+
+            android:contentDescription="@string/app_name" />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toLeftOf="@id/img_product_fav"
+
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:maxLines="1"
+
+            android:layout_marginTop="@dimen/_15sdp"
+            app:layout_constraintTop_toTopOf="@id/img_product_fav"
+            android:gravity="center"
+            android:text="ريال سعودى "
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/homefont"
+
+
+            android:id="@+id/tv_name_fav"/>
+
+        <TextView
+            android:layout_width="@dimen/_200sdp"
+android:paddingLeft="@dimen/_10sdp"
+            android:paddingRight="@dimen/_10sdp"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_10sdp"
+
+
+            app:layout_constraintTop_toBottomOf="@id/tv_name_fav"
+android:layout_marginTop="@dimen/_15ssp"
+            app:layout_constraintRight_toLeftOf="@id/img_product_fav"
+
+            android:text="ريال سعودى "
+            android:textSize="@dimen/_8ssp"
+            android:textColor="#8D000000"
+            android:fontFamily="@font/homefont"
+
+
+            android:id="@+id/tv_desc_fav"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

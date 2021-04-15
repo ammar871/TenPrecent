@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/container_producte"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.tenpercent.activites.HomeActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_80sdp"
+            android:background="@color/purple_500"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_gravity="right"
+                android:text="المنتــجات "
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="@dimen/_18ssp"
+                app:layout_constraintTop_toTopOf="parent"
+
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:fontFamily="@font/homefont"/>
+            <ImageView
+                android:id="@+id/img_cart"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:src="@drawable/ic_baseline_shopping_cart_white"/>
+
+            <RelativeLayout
+                android:id="@+id/relatev_hid_cart"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                app:layout_constraintRight_toRightOf="@id/img_cart"
+                app:layout_constraintTop_toTopOf="@id/img_cart"
+                android:background="@drawable/circle_txt"
+                tools:layout_editor_absoluteX="22dp">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textSize="10sp"
+                        android:textColor="@color/white"
+                        android:text="1"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:id="@+id/tv_counter_cart"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/img_notiy"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/img_cart"
+                android:layout_marginLeft="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:src="@drawable/ic_baseline_favorite_24"/>
+            <RelativeLayout
+                android:id="@+id/relatev_hid_fave"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                app:layout_constraintRight_toRightOf="@id/img_notiy"
+                app:layout_constraintTop_toTopOf="@id/img_notiy"
+                android:background="@drawable/circle_txt"
+                tools:layout_editor_absoluteX="22dp">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textSize="10sp"
+                        android:textColor="@color/white"
+                        android:text="1"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:id="@+id/tv_counter_fave"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </RelativeLayout>
+
+
+
+            <EditText
+                android:id="@+id/ed_searsh"
+                android:paddingRight="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:hint="ابحث عن منتجك "
+                android:windowSoftInputMode="adjustResize"
+                android:background="@color/white"
+                android:fontFamily="@font/homefont"
+                android:drawableRight="@drawable/ic_baseline_search_24"
+                android:gravity="right|center"
+                android:textColorHint="@color/black"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:drawablePadding="@dimen/_5sdp"
+                app:layout_constraintTop_toBottomOf="@id/img_cart"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.core.widget.NestedScrollView
+            app:layout_constraintTop_toBottomOf="@id/layout_bar"
+            android:layout_width="match_parent"
+            android:id="@+id/linerHome"
+            android:layout_margin="@dimen/_8sdp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:fillViewport="true"
+            tools:context=".home.CatograyFragment">
+
+
+
+            <LinearLayout
+                android:id="@+id/lautamp"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="match_parent"
+                android:descendantFocusability="blocksDescendants">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/_1sdp"
+                    android:id="@+id/rc_product">
+
+                </androidx.recyclerview.widget.RecyclerView>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+</layout>

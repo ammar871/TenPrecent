@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ammarten.tenpercent">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission. ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TENPERCENT">
+        <activity android:name="com.tenpercent.activites.SearshActivity"></activity>
+        <activity android:name="com.tenpercent.activites.AbouteUsActivity" />
+        <activity android:name="com.tenpercent.activites.MyFavoraiteActivity" />
+        <activity android:name="com.tenpercent.activites.EditeProfileActivity" />
+        <activity android:name="com.tenpercent.activites.PermissionsActivity" />
+        <activity android:name="com.tenpercent.activites.SelectCityActivity" />
+        <activity android:name="com.tenpercent.activites.CartActivity" />
+        <activity android:name="com.tenpercent.auth.RegisterActivity" />
+        <activity android:name="com.tenpercent.activites.DetailsActivity" />
+        <activity android:name="com.tenpercent.activites.PrductesActivity" />
+        <activity android:name="com.tenpercent.activites.HomeActivity" />
+        <activity android:name="com.tenpercent.auth.LoginActivity" />
+        <activity android:name="com.tenpercent.spilash.SpilashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

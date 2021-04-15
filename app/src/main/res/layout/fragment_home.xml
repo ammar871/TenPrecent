@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/container_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.tenpercent.fragments.HomeFragment">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_alignParentTop="true"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:fontFamily="@font/homefont"
+                android:text="الرئيسية "
+                android:textColor="@color/black"
+                android:textSize="@dimen/_18ssp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/img_cart"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginLeft="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:src="@drawable/ic_baseline_shopping_cart_24"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RelativeLayout
+                android:id="@+id/relatev_hid_cart"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:background="@drawable/circle_txt"
+                app:layout_constraintRight_toRightOf="@id/img_cart"
+                app:layout_constraintTop_toTopOf="@id/img_cart"
+                tools:layout_editor_absoluteX="22dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <TextView
+                        android:id="@+id/tv_counter_cart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        android:textColor="@color/white"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/img_notiy"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginLeft="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:src="@drawable/ic_color_favorite_24"
+                app:layout_constraintLeft_toRightOf="@id/img_cart"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RelativeLayout
+                android:id="@+id/relatev_hid_notyt"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:background="@drawable/circle_txt"
+                app:layout_constraintRight_toRightOf="@id/img_notiy"
+                app:layout_constraintTop_toTopOf="@id/img_notiy"
+                tools:layout_editor_absoluteX="22dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <TextView
+                        android:id="@+id/tv_counter_fave"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        android:textColor="@color/white"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </RelativeLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <RelativeLayout
+            android:id="@+id/searsh_bar"
+            android:layout_width="match_parent"
+
+            android:layout_height="@dimen/_40sdp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+
+                android:id="@+id/ed_searsh"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_1sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:background="@drawable/draw_border"
+                android:drawableRight="@drawable/ic_baseline_search_24"
+                android:drawablePadding="@dimen/_5sdp"
+                android:fontFamily="@font/homefont"
+
+                android:gravity="right|center"
+                android:text="ابحث عن منتجك "
+                android:paddingRight="@dimen/_5sdp"
+                android:textColor="@color/black"
+                android:windowSoftInputMode="adjustResize" />
+        </RelativeLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:visibility="gone"
+            android:id="@+id/linerHome"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:fillViewport="true"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/searsh_bar"
+            tools:context=".home.CatograyFragment">
+
+
+            <LinearLayout
+                android:id="@+id/lautamp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:descendantFocusability="blocksDescendants"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/viewPager"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="2dp"
+                        tools:ignore="MissingConstraints" />
+
+                    <LinearLayout
+
+                        android:id="@+id/sliderDots"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:orientation="horizontal">
+
+                    </LinearLayout>
+                </LinearLayout>
+
+<!--                <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="@dimen/_75sdp"-->
+<!--                    android:layout_marginTop="@dimen/_5sdp">-->
+
+<!--                    <ImageView-->
+<!--                        android:id="@+id/img_add"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:contentDescription="@string/app_name"-->
+<!--                        android:scaleType="fitXY"-->
+<!--                        android:src="@color/purple_500" />-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginLeft="@dimen/_20sdp"-->
+<!--                        android:background="@drawable/drawble_adds"-->
+<!--                        android:drawableLeft="@drawable/ic_baseline_arrow_left_24"-->
+<!--                        android:drawablePadding="@dimen/_5sdp"-->
+<!--                        android:fontFamily="@font/homefont"-->
+<!--                        android:gravity="center"-->
+<!--                        android:paddingStart="@dimen/_10sdp"-->
+<!--                        android:paddingLeft="@dimen/_10sdp"-->
+<!--                        android:paddingTop="@dimen/_5sdp"-->
+<!--                        android:paddingEnd="@dimen/_12sdp"-->
+<!--                        android:paddingRight="@dimen/_12sdp"-->
+<!--                        android:paddingBottom="@dimen/_5sdp"-->
+<!--                        android:text="شارك"-->
+<!--                        android:textColor="@color/purple_500"-->
+<!--                        android:textSize="@dimen/_10ssp"-->
+<!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--                        app:layout_constraintTop_toTopOf="parent" />-->
+
+
+<!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_catogry"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_gravity="right"
+                        android:layout_margin="@dimen/_12sdp"
+                        android:fontFamily="@font/homefont"
+                        android:gravity="center"
+                        android:text="الاقسام"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_19ssp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rc_catogery"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="match_parent">
+
+                </androidx.recyclerview.widget.RecyclerView>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_ofers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_gravity="right"
+                        android:layout_margin="@dimen/_12sdp"
+                        android:fontFamily="@font/homefont"
+                        android:gravity="center"
+                        android:text="العروض"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_19ssp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+
+                        app:layout_constraintTop_toTopOf="parent" />
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/tv_viewAll"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="right"-->
+<!--                        android:layout_margin="@dimen/_12sdp"-->
+<!--                        android:background="@drawable/draw_border"-->
+<!--                        android:drawableLeft="@drawable/ic_baseline_arrow_left_white"-->
+<!--                        android:fontFamily="@font/homefont"-->
+<!--                        android:gravity="center"-->
+<!--                        android:paddingLeft="@dimen/_9sdp"-->
+<!--                        android:paddingTop="@dimen/_3sdp"-->
+<!--                        android:paddingRight="@dimen/_9sdp"-->
+<!--                        android:paddingBottom="@dimen/_3sdp"-->
+<!--                        android:text="عرض الكل "-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:textSize="@dimen/_12ssp"-->
+<!--                        android:textStyle="bold"-->
+<!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+
+<!--                        app:layout_constraintLeft_toLeftOf="parent"-->
+
+<!--                        app:layout_constraintTop_toTopOf="parent" />-->
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rc_offers"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_bastes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_gravity="right"
+                        android:layout_margin="@dimen/_12sdp"
+                        android:fontFamily="@font/homefont"
+                        android:gravity="center"
+                        android:text="الأكثر رواجا"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_19ssp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+
+                        app:layout_constraintTop_toTopOf="parent" />
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/tv_viewAllbastest"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="right"-->
+<!--                        android:layout_margin="@dimen/_12sdp"-->
+<!--                        android:background="@drawable/draw_border"-->
+<!--                        android:drawableLeft="@drawable/ic_baseline_arrow_left_white"-->
+<!--                        android:fontFamily="@font/homefont"-->
+<!--                        android:gravity="center"-->
+<!--                        android:paddingLeft="@dimen/_9sdp"-->
+<!--                        android:paddingTop="@dimen/_3sdp"-->
+<!--                        android:paddingRight="@dimen/_9sdp"-->
+<!--                        android:paddingBottom="@dimen/_3sdp"-->
+<!--                        android:text="عرض الكل "-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:textSize="@dimen/_12ssp"-->
+<!--                        android:textStyle="bold"-->
+<!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+
+<!--                        app:layout_constraintLeft_toLeftOf="parent"-->
+
+<!--                        app:layout_constraintTop_toTopOf="parent" />-->
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rc_bast"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_1sdp">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_product"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_gravity="right"
+                        android:layout_margin="@dimen/_12sdp"
+                        android:fontFamily="@font/homefont"
+                        android:gravity="center"
+                        android:text="المنتجات الموصى بها"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_19ssp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+
+                        app:layout_constraintTop_toTopOf="parent" />
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/tv_viewAllproduct"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="right"-->
+<!--                        android:layout_margin="@dimen/_12sdp"-->
+<!--                        android:background="@drawable/draw_border"-->
+<!--                        android:drawableLeft="@drawable/ic_baseline_arrow_left_white"-->
+<!--                        android:fontFamily="@font/homefont"-->
+<!--                        android:gravity="center"-->
+<!--                        android:paddingLeft="@dimen/_9sdp"-->
+<!--                        android:paddingTop="@dimen/_3sdp"-->
+<!--                        android:paddingRight="@dimen/_9sdp"-->
+<!--                        android:paddingBottom="@dimen/_3sdp"-->
+<!--                        android:text="عرض الكل "-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:textSize="@dimen/_12ssp"-->
+<!--                        android:textStyle="bold"-->
+<!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+
+<!--                        app:layout_constraintLeft_toLeftOf="parent"-->
+
+<!--                        app:layout_constraintTop_toTopOf="parent" />-->
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rc_recmmende"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_1sdp">
+
+                </androidx.recyclerview.widget.RecyclerView>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ProgressBar
+
+                android:id="@+id/progressbar"
+                android:layout_centerVertical="true"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_centerHorizontal="true"
+                android:gravity="center|center_vertical"
+                android:theme="@style/Theme.TENPERCENT.menclor2"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</layout>

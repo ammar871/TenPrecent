@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/_200sdp"
+    android:layout_margin="@dimen/_3ssp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="@dimen/_2sdp"
+    app:cardCornerRadius="@dimen/_1sdp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="199dp"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_5sdp">
+
+        <ImageView
+            android:id="@+id/img_product_horz"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_marginTop="@dimen/_12ssp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/img_fav_product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_2sdp"
+            android:contentDescription="@string/app_name"
+            android:padding="@dimen/_5ssp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_unfavorite"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_pric_hrz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_2sdp"
+            android:contentDescription="@string/app_name"
+            android:padding="@dimen/_5ssp"
+            android:scaleType="fitXY"
+            android:textColor="#F40505"
+            app:layout_constraintRight_toRightOf="parent"
+
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+
+            android:id="@+id/tv_producte_name_horz"
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:fontFamily="@font/homefont"
+            android:gravity="center"
+            android:maxLines="2"
+            android:paddingStart="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_5sdp"
+            android:text="ريال سعودىwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww "
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintRight_toRightOf="parent"
+
+            app:layout_constraintTop_toBottomOf="@id/img_product_horz" />
+
+        <TextView
+            android:id="@+id/tv_desc_product_horz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:fontFamily="@font/homefont"
+            android:gravity="center"
+            android:maxLines="2"
+            android:paddingStart="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_5sdp"
+            android:text="ريال سعودswhjsjss
+            ssmssssnssnsssnnsnsnsnssnsnsss
+            ssssssى "
+            android:textColor="#8D000000"
+            android:textSize="@dimen/_8ssp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_producte_name_horz" />
+
+
+        <TextView
+
+            android:id="@+id/tv_add_cart"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_25sdp"
+
+            android:layout_marginTop="@dimen/_15sdp"
+
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:background="@drawable/drawble_text"
+            android:fontFamily="@font/homefont"
+
+            android:gravity="center_horizontal"
+            android:padding="@dimen/_4sdp"
+            android:text="أضف للسلة"
+            android:textColor="@color/purple_500"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_desc_product_horz" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
